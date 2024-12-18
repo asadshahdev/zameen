@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
     ];
 
     /**
@@ -39,6 +40,12 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        //'password' => 'hashed',
     ];
+
+    public $timestamps=false;
+
+    public function propertie(){
+        return $this->hasMany(propertie::class);
+    }
 }
