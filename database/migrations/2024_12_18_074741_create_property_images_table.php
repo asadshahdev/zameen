@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('image_name');
-            $table->string('image_url');
+            $table->text('image_url');
             $table->foreignId('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->enum('type',['thumb','slide']);
             $table->timestamps();

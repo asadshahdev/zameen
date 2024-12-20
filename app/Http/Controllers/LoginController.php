@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,10 +15,11 @@ class LoginController extends Controller
         ]);
 
         if(Auth::attempt($credentials)){
-            return redirect()->route('dashboard');
+            return redirect()->route('usercheckpost');
         }
     }
-    public function dashboard(){
-        return view('dashboard');
+
+    public function usercheckpost(){
+        return redirect()->route('dashboard');
     }
 }

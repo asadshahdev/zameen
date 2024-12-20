@@ -8,11 +8,11 @@
     <form action="{{route('loginmatch')}}" method="POST">
         @csrf
         <div class="mb-2">
-            <label for="useremail" class="form-babel">Email</label>
+            <label for="useremail" class="form-label">Email</label>
             <input type="text" class="form-control" name="email" id="username">
         </div>
         <div class="mb-2">
-            <label for="password" class="form-babel">Password</label>
+            <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" name="password" id="password">
         </div>
         <div class="mb-2">

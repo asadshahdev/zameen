@@ -17,7 +17,7 @@ class RegisterController extends Controller
         ]);
 
         $user = User::create($data);
-        if($data){
+        if($user){
             return redirect()->route('login');
         }
     }
