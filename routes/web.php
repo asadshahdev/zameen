@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DealerController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -29,8 +30,8 @@ Route::post('/login',[LoginController::class,'login'])->name('loginmatch');
 route::get('/usercheckpost',[loginController::class,'usercheckpost'])->name('usercheckpost')
 ->middleware(["auth","role"]);
 Route::get('/dashboard',[DealerController::class,'dealerdashboard'])->name('dashboard');
-
 Route::get('/clientdashboard',[ClientController::class,'clientdashboard'])->name('clientdashboard'); 
+Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
 
 
 
