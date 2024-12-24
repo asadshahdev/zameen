@@ -22,25 +22,7 @@ class ValidUser
      */
     public function handle(Request $request, Closure $next,): Response
     {            
-       /* $userrole = Auth::User()->role;
-        if ($userrole === 'client' && $role === 'client'){
-            return $next($request);
-        }elseif($userrole === 'dealer' && $role === 'dealer'){
-            return $next($request);
-        }else{
-            return redirect()->route('login');
-        }*/
-        
-        /*if (Auth::User()->role == $role){
-            return $next($request);
-        }elseif(Auth::User()->role == "client"){
-            return redirect()->route('dealerdashboard');
-        }else{
-            return redirect()->route('login');
-        }*/
-
-
-        
+           
         if(Auth::check()){
             
             if($this->client === Auth::user()->role){

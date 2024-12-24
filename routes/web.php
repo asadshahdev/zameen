@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DealerController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -33,7 +34,7 @@ Route::get('/dashboard',[DealerController::class,'dealerdashboard'])->name('dash
 Route::get('/clientdashboard',[ClientController::class,'clientdashboard'])->name('clientdashboard'); 
 Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
 
-
+Route::resource('property',PropertyController::class);
 
 
 

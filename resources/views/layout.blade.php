@@ -19,6 +19,16 @@
                 <h4>@yield('title')</h4>
             </div>
         </div>
+        <div>
+            <div class="row">
+                <div class="col-8">                
+                @if (session('status'))
+                <div class="alert alert-success">
+                    {{(session('status'))}}
+                @endif
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-8">
                 @yield('content')
